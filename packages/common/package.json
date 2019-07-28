@@ -1,0 +1,20 @@
+{
+  "name": "@pyro/common",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "16.8.3",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz"
+  },
+  "devDependencies": {
+    "@types/react-native": "^0.60.2",
+    "typescript": "^3.5.3"
+  }
+}
