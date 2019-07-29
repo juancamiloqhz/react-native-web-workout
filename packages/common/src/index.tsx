@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
+import { observer } from "mobx-react-lite";
 import { StyleSheet, Text, View, Button } from "react-native";
+import { CounterStoreContext } from "../stores/CounterStore";
 
-export const App = () => {
-  const [count, setCount] = React.useState(0);
+export const App = observer(() => {
+  const counterStore = useContext(CounterStoreContext);
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsxdsadf to start working on your app!</Text>
-      <Button title="Add" onPress={() => setCount(d => d + 1)} />
-      <Text>{count}</Text>
+      <Text>Open up App.tsx to start working oon your app!</Text>
+      <Button title="Add" onPress={() => counterStore.count++} />
+      <Text>{counterStore.count}</Text>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   container: {
